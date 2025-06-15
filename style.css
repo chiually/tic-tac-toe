@@ -2,8 +2,8 @@
     --text-color: #EC8F8F;
     --comp-color: #FCDDE3;
     --background-color: #FFFFF9;
-    --grid-width: 40vw;
-    --grid-height: 40vw;
+    --grid-width: 35vw;
+    --grid-height: 35vw;
   }
 
 html {
@@ -14,7 +14,7 @@ html {
     margin: 0;
 }
 
-body {
+.container {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -76,15 +76,19 @@ header {
     grid-template-rows: 1fr 1fr 1fr;
     width: var(--grid-width);
     height: var(--grid-height);
-    
+}
+
+.box {
+    all: unset; /* removes native button styling */
+    text-align: center;
+    font-size: clamp(1rem, 8vw, 150px);;
 }
 
 /* dialog */
-dialog {
+.custom-dialog {
     position: fixed;
-    top: 15%;
+    top: 0;
     border-radius: 15px;
-    
 }
 
 form {
@@ -142,11 +146,17 @@ input:-webkit-autofill {
     color: var(--text-color)
 }
 
+#start-button {
+    font-size: clamp(12px, 1.25rem, 30px);
+}
+
 /* message board */
 .msg-board {
     background: var(--comp-color);
     border-radius: 20px;
     text-align: center;
     text-wrap: balance;
-    font-size: clamp(12px, 3vw, 30px);
+    font-size: clamp(12px, 2.5vw, 30px);
+    margin: 15px 0 0 0;
+    padding: 7px;
 }
